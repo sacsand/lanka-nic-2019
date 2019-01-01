@@ -14,8 +14,8 @@
     "nspcheck": "nsp check",
     "prepublish": "npm test"
   },
-  "author": "NPM Demo User <npm.demo.c4c5nf3@gmail.com> (www.sachintha.me)",
-  "license": "ISC",
+  "author": "Sachintha Sandaruvan - sacsand (www.sachintha.me)",
+  "license": "MIT",
   "devDependencies": {
     "babel-eslint": "^8.0.1",
     "eslint": "^4.8.0",
