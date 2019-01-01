@@ -1,0 +1,29 @@
+{
+  "name": "lanka-nic-2019",
+  "version": "1.0.0",
+  "description": "new sri lanka nic validator 2019 support both old and new nic id format .this pacakge can be used to swap nic ,validate and get more info like ,bday,gender ",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.test.js",
+    "eslinttest": "eslint src",
+    "nspcheck": "nsp check",
+    "prepublish": "npm test"
+  },
+  "author": "NPM Demo User <npm.demo.c4c5nf3@gmail.com> (www.sachintha.me)",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-eslint": "^8.0.1",
+    "eslint": "^4.8.0",
+    "eslint-config-airbnb": "^16.0.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-prettier": "^2.6.0",
+    "eslint-plugin-react": "^7.4.0",
+    "husky": "^0.14.3",
+    "nodemon": "^1.14.12",
+    "nsp": "^3.1.0",
+    "prettier": "^1.12.1",
+    "prettier-eslint": "^8.2.1"
+  }
+}
