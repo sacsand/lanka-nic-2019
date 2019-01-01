@@ -1,12 +1,12 @@
 const mynic = require('./index.js');
 
-// console.log(mynic.infoNic('931260723v'));
-// console.log(mynic.validateNic('931260723v'));
-// console.log(mynic.swapNic('931260723v'));
+console.log(mynic.infoNic('931260723v'));
+console.log(mynic.validateNic('931260723v'));
+console.log(mynic.swapNic('931260723v'));
 
-// console.log(mynic.infoNic('200184300068'));
-// console.log(mynic.validateNic('200184500068'));
-// console.log(mynic.swapNic('200184500068'));
+console.log(mynic.infoNic('200184300068'));
+console.log(mynic.validateNic('200184500068'));
+console.log(mynic.swapNic('200184500068'));
 
 // TEST 1
 // check validation is working for old nic format
