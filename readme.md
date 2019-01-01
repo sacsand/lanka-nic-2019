@@ -43,9 +43,9 @@ lanakNic.swapNic('12345678912');
 
 | Method | Input | outPut |
 | ------ | --------------------------------| ------------------------------------------------ |
-| validateNic       |     String: String : old or new nic number | Bool: `true` or `false `       |
-| swapNic       |     String: String : old or new nic number | String : `xxxxxxxxxv` ,swap nic old to new and vice versa , if enetered nic no is incorrect will display 'incorrect format' error message        |
-| infoNic | String : old or new nic number |  Object :                                         | 
+| validateNic(Input)       |     String : old or new nic number | Bool: `true` or `false `       |
+| swapNic(Input)       |     String : old or new nic number | String : `xxxxxxxxxv` ,swap nic old to new and vice versa , if enetered nic no is incorrect will display 'incorrect format' error message        |
+| infoNic(Input) | String : old or new nic number |  Object :                                         | 
 |         |                                |  `{`                                                |    
 |         |                                |  `   isValidated: true,   `                        |  
 |         |                                |  `   input: '123456789v',   `                      | 
@@ -79,7 +79,7 @@ $ npm run test
 ```
  ##### versioning
  
-  used  [SemVer](https://semver.org/)SemVer for versioning. 
+  used  [SemVer](https://semver.org/) for versioning. 
   
  ##### style guide
  follow the AirBnb Style Guide.
