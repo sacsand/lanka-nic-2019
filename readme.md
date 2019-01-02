@@ -1,17 +1,14 @@
 # lanka-nic-2019
 [![https://nodei.co/npm/lanka-nic-2019.png?downloads=true&downloadRank=true&stars=true](https://nodei.co/npm/lanka-nic-2019.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/lanka-nic-2019)
 
-New sri lanka nic validator 2019 support both old and new nic id format .this pacakge can be used to swap nic ,validate and get more info like ,bday,gender etc.. 
+Sri Lankan NIC validator which supports both old and new NIC formats. This pacakge can be used to swap NIC, validate and get more info like, bday, gender etc.. 
 
-# Function Supports
-
-  - validate nic
-  - swap nic number.old to new or new to old.
-  - get nic infromation (bday,gender,old and new format...)
+# Features
+  - Validate NIC.
+  - Swap NIC. (Old to new or new to old)
+  - Extract NIC infromation. (Bday, Gender, etc..)
   
 # Installation
-
-
 ```sh
 $ npm install lanka-nic-2019 --save
 ```
@@ -19,33 +16,31 @@ or
 ```sh
 $ yarn add lanka-nic-2019 
 ```
+
 # How to use
-
-require
-```sh
+- First, require
+```javascript
 const lankaNic = require('lanaka-nic-2019');
-
-
-lanakNic.infoNic('123456789v');
-lanakNic.validateNic('123456789v');
-lanakNic.swapNic('123456789v');
 ```
 or import
-```sh
+```javascript
 import lankaNic from 'lanka-nic-2019';
+```
 
-
+- Next, call the functions like:
+```javascript
 lanakNic.infoNic('12345678912');
 lanakNic.validateNic('12345678912');
 lanakNic.swapNic('12345678912');
 ```
-### supported methods
 
-| Method | Input | outPut |
+### Supported methods
+
+| Method | Input | Output |
 | ------ | --------------------------------| ------------------------------------------------ |
-| validateNic(Input)       |     String : old or new nic number | Bool: `true` or `false `       |
-| swapNic(Input)       |     String : old or new nic number | String : `xxxxxxxxxv` ,swap nic old to new and vice versa , if enetered nic no is incorrect will display 'incorrect format' error message        |
-| infoNic(Input) | String : old or new nic number |  Object :                                         | 
+| validateNic       |     String : Old or new NIC number | Bool: `true` or `false `       |
+| swapNic      |     String : Old or new NIC number | String : `xxxxxxxxxv` , Swap NIC old to new and vice versa. If enetered Nic no. is incorrect will display 'incorrect format' error message.        |
+| infoNic | String : Old or new NIC number |  Object :                                         | 
 |         |                                |  `{`                                                |    
 |         |                                |  `   isValidated: true,   `                        |  
 |         |                                |  `   input: '123456789v',   `                      | 
@@ -61,30 +56,33 @@ lanakNic.swapNic('12345678912');
 
 ### Developing
 
-Any modification , correction welcome 
+Any modification, correction welcome 
 
-##### prerequisites
- - nodejs(6+)
- - EsLint support editor
+##### Prerequisites
+ - NodeJS(6+)
+ - EsLint supported editor.
  
 
-##### setting up
+##### Setting up
  
- clone the repo and npm install . make sure to use eslint.
+Clone the repo and run `yarn install` or `npm install`. Make sure you have an editor with an eslint plugin active. **Never** start working without eslint.
  
-##### testing
-beforre push chek for the erros
+##### Testing
+Before pushing the code, please check for errors:
+
 ```sh
-$ npm run test
+npm run test
 ```
- ##### versioning
- 
-  used  [SemVer](https://semver.org/) for versioning. 
-  
- ##### style guide
- follow the AirBnb Style Guide.
- 
-  License
-----
 
-MIT
+
+## Versioning
+
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [link to tags on this repository](/tags).
+
+## Style guide
+
+Always follow the AirBnb Style Guide.
+
+## License
+
+[MIT licensed](./LICENSE).
