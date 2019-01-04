@@ -3,6 +3,11 @@
 
 */
 
+/* WHY HARCODED MONTHS OBJECT :  Sri Lanka NIC ID originally generated assuming 
+  that February having 29 days, including non leaf years.That means 366 days per year. 
+  full explanation https://github.com/sacsand/lanka-nic-2019/issues/1
+*/
+
 const monthArr = [
   {
     month: 'January',
@@ -55,8 +60,12 @@ const monthArr = [
 ];
 
 // funtion to add char(s) to given index . if want remove some index.and return new string
-const splice = function(text, idx, rem, str) {
-  return text.slice(0, idx) + str + text.slice(idx + Math.abs(rem));
+const splice = (text, idx, rem, str) => text.slice(0, idx) + str + text.slice(idx + Math.abs(rem));
+
+// function checking the dayNo is in right range
+const checkDayNo = (nicNumber, charIndex, length) => {
+  const dayNo = parseInt(nicNumber.substr(charIndex, length), 10);
+  return (dayNo > 0 && dayNo < 367) || (dayNo > 500 && dayNo < 867);
 };
 
 const getDayGender = days => {
@@ -75,7 +84,7 @@ const getDayGender = days => {
     dayNo -= 500;
   }
 
-  for (let i = 0; i < monthArr.length; i++) {
+  for (let i = 0; i < monthArr.length; i += 1) {
     if (monthArr[i].days < dayNo) {
       dayNo -= monthArr[i].days;
     } else {
@@ -110,8 +119,8 @@ const getData = nicNumber => {
 
     /* convert old nic to new nic
      1) get first 9 char
-     2)add 0 after 5th char
-     3)add 19 to front 
+     2) add 0 after 5th char
+     3) add 19 to front 
     */
     result.newFormat = splice(splice(nicNumber.substr(0, 9), 5, 0, '0'), 0, 0, '19');
     result.oldFormat = nicNumber;
@@ -125,11 +134,11 @@ const getData = nicNumber => {
     result.newFormat = nicNumber;
     result.newFormat = nicNumber;
 
-    /* conver new nic to new old
-     0) check for support to convert. only nic start with 19 can be converted to old nic format
-     1) get first 9 char
-     2) add 0 after 5th char
-     3) add 19 to front 
+    /* convert new nic to  old
+     0) check for the support to convert. only nic start with 19 can be converted to old nic format
+     1) extract 10 char after index 2
+     2) remove the char after the 5th index.
+     3) then add v to the end 
     */
     result.oldFormat =
       nicNumber.substr(0, 2) === '19'
@@ -148,16 +157,19 @@ const validation = nicNumber => {
   const lastChar = nicNumber.substr(9, 1).toLowerCase();
 
   /* old format -check the nic no count equal to 10 and first 9 char is a valid
-   number  and last char is not   a number and last charater should equal to x or y  */
+   number  and last char is not   a number and last charater should equal to x or y  
+   and day no is in right range */
+
   if (
     nicLength === 10 &&
     !isNaN(nicNumber.substr(0, 9)) &&
     isNaN(lastChar) &&
-    ['x', 'v'].includes(lastChar)
+    ['x', 'v'].includes(lastChar) &&
+    checkDayNo(nicNumber, 2, 3) === true
   ) {
     isValidated = true;
     // new format - check
-  } else if (nicLength === 12 && !isNaN(nicNumber)) {
+  } else if (nicLength === 12 && !isNaN(nicNumber) && checkDayNo(nicNumber, 4, 3) === true) {
     isValidated = true;
   } else {
     isValidated = false;
