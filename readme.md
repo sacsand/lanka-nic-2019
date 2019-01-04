@@ -39,7 +39,7 @@ lanakNic.swapNic('12345678912');
 | Method | Input | Output |
 | ------ | --------------------------------| ------------------------------------------------ |
 | validateNic       |     String : Old or new NIC number | Bool: `true` or `false `       |
-| swapNic      |     String : Old or new NIC number | String : `xxxxxxxxxv` , Swap NIC old to new and vice versa. If enetered Nic no. is incorrect will display 'incorrect format' error message.        |
+| swapNic      |     String : Old or new NIC number | String : `xxxxxxxxxv` , Swap NIC old to new and vice versa. If entered Nic no. is incorrect will display 'incorrect format' error message.        |
 | infoNic | String : Old or new NIC number |  Object :                                         | 
 |         |                                |  `{`                                                |    
 |         |                                |  `   isValidated: true,   `                        |  
