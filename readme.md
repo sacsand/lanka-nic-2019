@@ -1,7 +1,7 @@
 # lanka-nic-2019
 [![https://nodei.co/npm/lanka-nic-2019.png?downloads=true&downloadRank=true&stars=true](https://nodei.co/npm/lanka-nic-2019.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/lanka-nic-2019)
 
-Sri Lankan NIC validator which supports both old and new NIC formats. This pacakge can be used to swap NIC, validate and get more info like, bday, gender etc.. 
+Sri Lankan NIC validator which supports both old and new NIC formats. This package can be used to swap NIC, validate and get more info like, bday, gender etc.. 
 
 # Features
   - Validate NIC.
@@ -20,7 +20,7 @@ $ yarn add lanka-nic-2019
 # How to use
 - First, require
 ```javascript
-const lankaNic = require('lanaka-nic-2019');
+const lankaNic = require('lanka-nic-2019');
 ```
 or import
 ```javascript
